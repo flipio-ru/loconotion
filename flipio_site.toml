@@ -2,7 +2,7 @@ name = "flipio"
 
 # the notion.so page to being parsing from. This page will become the index.html
 # of the generated site, and loconotation will parse all sub-pages present on the page
-page = "https://www.notion.so/b84e0a641e8949649ff431eb897306fc"
+page = "https://flipio.notion.site/b84e0a641e8949649ff431eb897306fc"
 
 ## Global Site Settings ##
 # this [site] table defines override settings for the whole site
@@ -34,7 +34,7 @@ page = "https://www.notion.so/b84e0a641e8949649ff431eb897306fc"
 
     [[pages.764097f8c03440e9b4f77567faeaea58.meta]]
       name = "description"
-      content = "Переуступка и подбор проектов по флиппингу - Флипио"
+      content = "Уступка проектов по флиппингу - Флипио"
 
   [pages.7a8cb4fd1afc49298815b14b9abcd85a]
     slug = "signals"
@@ -90,7 +90,7 @@ page = "https://www.notion.so/b84e0a641e8949649ff431eb897306fc"
 
     [[pages.e6c314bb10fa4262936e680100a14719.meta]]
       name = "description"
-      content = "Совместное инвестирование во флиппинг. 40% годовых - Флипио"
+      content = "Заработайте на инвестировании в перепродажу квартир - Флипио"
 
   [pages.3099706b7cec4075be9c34bb73211b7a]
     slug = "invesment_safety"
@@ -119,3 +119,10 @@ page = "https://www.notion.so/b84e0a641e8949649ff431eb897306fc"
   [pages.266517f0de28477f8746c2a1c64826f5]
     slug = "news"
 #    no-links = true
+
+  [pages.4486827841344aa98107ec6597180db9]
+    slug = "about"
+
+    [[pages.4486827841344aa98107ec6597180db9.meta]]
+      name = "description"
+      content = "О Флипио"

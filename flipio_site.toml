@@ -78,6 +78,13 @@ page = "https://flipio.notion.site/b84e0a641e8949649ff431eb897306fc"
       name = "description"
       content = "Клуб флипперов - Флипио"
 
+  [pages.5f245e7260554f10891bc8e2b035a345]
+    slug = "club_rules"
+
+    [[pages.5f245e7260554f10891bc8e2b035a345.meta]]
+      name = "description"
+      content = "Правила Клуба флипперов - Флипио"
+
   [pages.abee1513f44f4fd39baffac017c14021]
     slug = "prices"
 

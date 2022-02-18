@@ -19,7 +19,7 @@ except ModuleNotFoundError as error:
     sys.exit()
 
 
-def get_args():
+def get_arg_parser():
     # set up argument parser and return parsed args
     argparser = argparse.ArgumentParser(
         description="Generate static websites from Notion.so pages"
@@ -35,8 +35,10 @@ def get_args():
     )
     argparser.add_argument(
         "--single-page",
-        action="store_true",
-        help="Only parse the first page, then stop",
+        help="Parse only this page. Parses only the root page if page URL is omitted.",
+        metavar="URL",
+        const="",
+        nargs="?",
     )
     argparser.add_argument(
         "--dark-theme",
@@ -73,7 +75,7 @@ def get_args():
     argparser.add_argument(
         "-v", "--verbose", action="store_true", help="Increase output log verbosity"
     )
-    return argparser.parse_args()
+    return argparser
 
 
 def setup_logging(args):

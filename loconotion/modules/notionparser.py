@@ -47,6 +47,12 @@ class Parser:
         # get the site name from the config, or make it up by cleaning the target page's slug
         site_name = self.config.get("name", self.get_page_slug(index_url, extension=False))
 
+        sp_arg = self.args.get("single_page")
+        if sp_arg is None or sp_arg == "":  # scan all pages or only the root
+            self.starting_url = index_url
+        else:
+            self.starting_url = sp_arg  # scan only this page
+
         self.index_url = index_url
 
         # set the output folder based on the site name
@@ -81,8 +87,6 @@ class Parser:
 
         # initialize chromedriver
         self.driver = self.init_chromedriver()
-
-        self.starting_url = index_url
 
     def get_page_config(self, token):
         # starts by grabbing the gobal site configuration table, if exists
@@ -722,7 +726,7 @@ class Parser:
 
     def parse_subpages(self, subpages):
         # parse sub-pages
-        if subpages and not self.args.get("single_page", False):
+        if subpages and self.args.get("single_page") is None:
             if self.processed_pages:
                 log.debug(f"Pages processed so far: {len(self.processed_pages)}")
             for sub_page in subpages:

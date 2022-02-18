@@ -207,7 +207,8 @@ On top of this, the script can take these optional arguments:
   --chromedriver CHROMEDRIVER
                         Use a specific chromedriver executable instead of the
                         auto-installing one
-  --single-page         Only parse the first page, then stop
+  --single-page [URL]   Only parse one page, then stop. If URL is omitted, parse
+                        the homepage
   --dark-theme          Use dark themed version of the target Notion.so page
   --timeout TIMEOUT     Time in seconds to wait for the loading of lazy-loaded
                         dynamic elements (default 5). If content from the page

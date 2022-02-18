@@ -5,7 +5,7 @@ import modules.main as main
 
 if __name__ == "__main__":
     try:
-        args = main.get_args()
+        args = main.get_arg_parser().parse_args()
         log = main.setup_logging(args)
         parser = main.init_parser(args, log)
         parser.run()
